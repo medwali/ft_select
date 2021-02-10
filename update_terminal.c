@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 10:26:13 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/02/10 00:50:42 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/02/10 12:25:11 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static void	print_element(t_selection_element *elem, int is_under_cursor)
 		tputs(tgetstr("mr", NULL), 1, ft_putchar_term);
 	if (is_under_cursor)
 		tputs(tgetstr("us", NULL), 1, ft_putchar_term);
-	ft_putstr(elem->value);
+	ft_putstr_fd(elem->value, get_term_fd());
 	tputs(tgetstr("me", NULL), 1, ft_putchar_term);
 }
 

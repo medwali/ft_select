@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 20:58:35 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/02/10 01:11:02 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/02/10 12:14:38 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	main_loop(t_selection_state **selection_state)
 	ssize_t	ret;
 	char	buf[5];
 
-	while (*selection_state && (ret = read(0, buf, 4)) > 0)
+	while (*selection_state && (ret = read(get_term_fd(), buf, 4)) > 0)
 	{
 		buf[ret] = '\0';
 		update_selection_state(*selection_state, buf);

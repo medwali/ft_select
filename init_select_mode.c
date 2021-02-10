@@ -20,7 +20,7 @@ void	init_select_mode(void)
 	term_attrs.c_lflag &= ~(ECHO | ICANON);
 	term_attrs.c_cc[VTIME] = 0;
 	term_attrs.c_cc[VMIN] = 1;
-	if (tcsetattr(0, TCSANOW, &term_attrs) == -1)
+	if (tcsetattr(get_term_fd(), TCSANOW, &term_attrs) == -1)
 		print_fatal_error(E_CANT_TCSETATTR);
 	tputs(tgetstr("ti", NULL), 1, ft_putchar_term);
 	tputs(tgetstr("vi", NULL), 1, ft_putchar_term);

@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 22:16:48 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/02/10 00:51:22 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/02/10 16:57:35 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 # define E_CANT_GET_TERM_DESC "ft_select: cannot get terminal description"
 # define E_NO_ARGS_GIVEN "ft_select: no arguments were given"
 # define E_CANT_GET_WINSZ "ft_select: cannot get window size"
+# define E_CANT_OPEN_TTY "ft_select: cannot open \"/dev/tty\""
 
 extern t_termios
 g_orig_term_attrs;

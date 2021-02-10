@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mel-idri <mel-idri@student.42.fr>          +#+  +:+       +#+         #
+#    By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/29 16:45:44 by mel-idri          #+#    #+#              #
-#    Updated: 2021/02/03 17:42:07 by mel-idri         ###   ########.fr        #
+#    Updated: 2021/02/09 19:29:16 by mel-idri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ endif
 CC = gcc
 
 LIBFT_INC = libft.h
-LIBFT_SRC = ft_autoalloc.c ft_nbrlen.c ft_nbrlen_base.c ft_atoi.c \
+LIBFT_SRC = ft_nbrlen.c ft_nbrlen_base.c ft_atoi.c \
 	ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 	ft_islower.c ft_isprint.c ft_isspace.c ft_isupper.c ft_itoa.c \
 	ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c ft_lstmap.c \
@@ -33,13 +33,13 @@ LIBFT_SRC = ft_autoalloc.c ft_nbrlen.c ft_nbrlen_base.c ft_atoi.c \
 	ft_strmap.c ft_strmapi.c ft_strncat.c ft_strncmp.c ft_strncpy.c \
 	ft_strnequ.c ft_strnew.c ft_strnstr.c ft_strrchr.c ft_strrev.c \
 	ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c \
-	ft_toupper.c ft_putunbr_base.c ft_write_buff.c \
 	ft_bigint_add.c ft_bigint_mult.c ft_bigint_power.c ft_bigint_init.c \
 	ft_bigint_util.c ft_queue_new.c ft_enqueue.c ft_dequeue.c \
 	ft_strglue.c ft_strjoin_free.c ft_strdup_free.c ft_lst_pushback.c \
 	ft_lst_pushback_str.c safe_malloc.c ft_free_list.c ft_memdup.c \
 	ft_strndup.c remove_chars.c skip_chars.c skip_until_chars.c \
-	ft_free_2d_chr_array.c ft_free_ptr.c ft_iscntrl.c
+	ft_free_2d_chr_array.c ft_free_ptr.c ft_iscntrl.c \
+	ft_toupper.c ft_putunbr_base.c ft_ceil.c print_fatal_error.c 
 LIBFT_OBJ = $(addprefix $(OBJS_DIR)/, $(LIBFT_SRC:.c=.o))
 
 VECTOR_INC = vector/vector.h vector/internal/vector_internal.h
@@ -59,7 +59,7 @@ DYNSTR_OBJ = $(addprefix $(OBJS_DIR)/dyn_str/, $(DYNSTR_SRC:.c=.o))
 
 OBJS_DIR = objs
 
-ALL_OBJS = $(LIBFT_OBJ) $(PRINTF_OBJ) $(VECTOR_OBJ) $(DYNSTR_OBJ)
+ALL_OBJS = $(LIBFT_OBJ) $(VECTOR_OBJ) $(DYNSTR_OBJ)
 
 all: $(NAME)
 
@@ -70,7 +70,7 @@ objs/%.o : %.c | $(OBJS_DIR)
 	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(LIBFT_OBJ) $(VECTOR_OBJ) $(DYNSTR_OBJ): $(LIBFT_INC) | $(OBJS_DIR)
+$(ALL_OBJS): $(LIBFT_INC) | $(OBJS_DIR)
 
 $(VECTOR_OBJ): $(VECTOR_INC)
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 19:28:52 by mel-idri          #+#    #+#             */
-/*   Updated: 2020/11/26 18:42:56 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/02/07 11:08:13 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,8 +126,8 @@ typedef struct	s_bigint
 }				t_bigint;
 typedef enum	e_split_mode
 {
-				ALLOW_EMPTY_WORD,
-				REJECT_EMPTY_WORD
+	ALLOW_EMPTY_WORD,
+	REJECT_EMPTY_WORD
 }				t_split_mode;
 char			**ft_strsplit(char const *s, char c, t_split_mode split_mode);
 t_bigint		*ft_bigint_new(unsigned int size);
@@ -150,5 +150,8 @@ char			*skip_chars(char *str, char *skipped_chars);
 void			ft_free_2d_chr_array(char **arr);
 void			ft_free_ptr(void *ptr);
 int				ft_iscntrl(char c);
+void			print_fatal_error(char *msg);
+unsigned int	ft_abs(int n);
+unsigned int	ft_ceil(unsigned int dividend, unsigned int divisor);
 
 #endif

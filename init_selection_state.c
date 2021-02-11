@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 18:11:08 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/02/07 17:03:11 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/02/10 19:15:50 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,10 @@ t_selection_state	*init_selection_state(char **argv)
 	argv++;
 	while (*argv)
 	{
-		selection_element.value = *argv++;
+		selection_element.value = *argv;
 		vector_push((t_vector*)selection_state->vector, 
 			&selection_element);
+		argv++;
 	}
 	return (selection_state);
 }

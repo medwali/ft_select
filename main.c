@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 21:54:36 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/02/10 12:18:36 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/02/10 19:47:57 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ int			main(int argc, char **argv)
 		print_fatal_error(E_NO_ARGS_GIVEN);
 	init_terminal();
 	init_select_mode();
-	update_terminal(selection_state);
 	init_signals();
+	update_terminal(selection_state);
 	main_loop(&selection_state);
 	exit_select_mode();
 	if (selection_state == NULL)

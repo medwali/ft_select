@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   dyn_str_util.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 21:11:40 by mel-idri          #+#    #+#             */
-/*   Updated: 2020/12/08 00:18:57 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:36:45 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "dyn_str_internal.h"
 
-size_t	get_close_power_of_2(size_t	n)
+size_t	get_close_power_of_2(size_t n)
 {
 	int	i;
 

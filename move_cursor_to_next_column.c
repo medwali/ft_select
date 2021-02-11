@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 16:05:32 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/02/08 09:07:02 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:33:19 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ void	move_cursor_to_next_column(t_selection_state *selection_state)
 
 	sel->cursor_pos += g_winsize.ws_row;
 	if (sel->cursor_pos >= sel->vector->length)
-			sel->cursor_pos %= g_winsize.ws_row;
+		sel->cursor_pos %= g_winsize.ws_row;
 	update_terminal(sel);
 }

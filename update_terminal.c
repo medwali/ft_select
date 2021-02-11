@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 10:26:13 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/02/10 12:25:11 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:33:10 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ static void	print_element(t_selection_element *elem, int is_under_cursor)
 static void	print_elements(t_selection_state *selection_state,
 		int element_padding)
 {
-	unsigned int i;
-	unsigned int j;
-	t_selection_state *const sel = selection_state;
+	unsigned int				i;
+	unsigned int				j;
+	t_selection_state *const	sel = selection_state;
 
 	i = 0;
 	j = 0;
@@ -71,8 +71,8 @@ static void	print_elements(t_selection_state *selection_state,
 
 void		update_terminal(t_selection_state *selection_state)
 {
-	int element_padding;
-	t_selection_state *const sel = selection_state;
+	int							element_padding;
+	t_selection_state *const	sel = selection_state;
 
 	if (!g_winsize.ws_col && !g_winsize.ws_row)
 		update_dimensions();

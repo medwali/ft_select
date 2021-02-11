@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   dyn_str_append.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 11:40:56 by mel-idri          #+#    #+#             */
-/*   Updated: 2020/12/03 01:17:12 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:30:41 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "internal/dyn_str_internal.h"
 
-void	dyn_str_append(t_dyn_str *dyn_str, char	*str)
+void	dyn_str_append(t_dyn_str *dyn_str, char *str)
 {
-	size_t	new_str_len;
+	size_t new_str_len;
 
 	if (!dyn_str || !str)
 		return ;

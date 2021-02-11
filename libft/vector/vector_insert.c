@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vector_insert.c                                 :+:      :+:    :+:   */
+/*   vector_insert.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 05:33:00 by mel-idri          #+#    #+#             */
-/*   Updated: 2020/06/14 20:14:45 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:34:43 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "internal/vector_internal.h"
 
-int			vector_insert(t_vector *vector, void *element, size_t index)
+int	vector_insert(t_vector *vector, void *element, size_t index)
 {
 	if (!vector || !element)
 		return (-1);

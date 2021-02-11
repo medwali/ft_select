@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 21:54:36 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/02/10 19:47:57 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:34:00 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 t_termios	g_orig_term_attrs;
 t_winsize	g_winsize;
+
 static void	init_terminal(void)
 {
 	if (tcgetattr(get_term_fd(), &g_orig_term_attrs) == -1)

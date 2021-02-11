@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   dyn_str_shrink.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 21:12:50 by mel-idri          #+#    #+#             */
-/*   Updated: 2020/12/03 01:55:53 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:36:59 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	dyn_str_shrink(t_dyn_str *dyn_str)
 {
-	char 	*new_str;
+	char	*new_str;
 	size_t	new_capacity;
 
 	if (dyn_str->len + 1 > dyn_str->capacity / 4)

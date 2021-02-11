@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 05:33:00 by mel-idri          #+#    #+#             */
-/*   Updated: 2020/11/12 14:11:13 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:34:21 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int			vector_pop(t_vector *vector, void *element)
 {
 	if (!vector || !element || vector->length == 0)
 		return (-1);
-	ft_memcpy(element, 
+	ft_memcpy(element,
 		vector->array + (vector->length - 1) * vector->element_size,
 		vector->element_size);
 	vector->length--;

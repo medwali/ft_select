@@ -6,20 +6,20 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/03 21:56:34 by mel-idri          #+#    #+#             */
-/*   Updated: 2020/04/03 21:56:54 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:36:36 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lst_pushback_str(t_list	**alst, char *str)
+int	ft_lst_pushback_str(t_list **alst, char *str)
 {
 	t_list	*node;
 
 	node = ft_lstnew(str, ft_strlen(str) + 1);
 	if (!node)
 		return (-1);
-	if(ft_lst_pushback(alst, node) == -1)
+	if (ft_lst_pushback(alst, node) == -1)
 		return (-1);
 	return (0);
 }

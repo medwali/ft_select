@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/14 20:25:05 by mel-idri          #+#    #+#             */
-/*   Updated: 2020/11/12 14:14:50 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:28:40 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	vector_grow_above(t_vector *vector, size_t min_capacity)
 	size_t	new_capacity;
 	void	*new_array;
 
-
 	new_capacity = 1;
 	while (min_capacity)
 	{
@@ -27,7 +26,8 @@ void	vector_grow_above(t_vector *vector, size_t min_capacity)
 	if (new_capacity > vector->capacity)
 	{
 		new_array = safe_malloc(new_capacity * vector->element_size);
-		ft_memcpy(new_array, vector->array, vector->length * vector->element_size);
+		ft_memcpy(new_array, vector->array,
+			vector->length * vector->element_size);
 		free(vector->array);
 		vector->array = new_array;
 		vector->capacity = new_capacity;

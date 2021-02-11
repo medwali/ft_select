@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 11:49:09 by mel-idri          #+#    #+#             */
-/*   Updated: 2020/11/22 11:23:25 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:32:15 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,4 @@ void	dyn_str_insert(t_dyn_str *dyn_str, size_t i, char *str)
 		dyn_str->len + 1 - i);
 	ft_memcpy(&dyn_str->str[i], str, inserted_str_len);
 	dyn_str->len += inserted_str_len;
-}		
+}

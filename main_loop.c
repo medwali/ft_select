@@ -6,13 +6,13 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 20:58:35 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/02/10 12:14:38 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:33:39 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_select.h"
 
-static void	update_selection_state(t_selection_state *selection_state,
+static void		update_selection_state(t_selection_state *selection_state,
 	char *buf)
 {
 	if (ft_strequ("\e[B", buf))
@@ -29,7 +29,7 @@ static void	update_selection_state(t_selection_state *selection_state,
 		delete_element(selection_state);
 }
 
-void	main_loop(t_selection_state **selection_state)
+void			main_loop(t_selection_state **selection_state)
 {
 	ssize_t	ret;
 	char	buf[5];

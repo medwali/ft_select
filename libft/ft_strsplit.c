@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 23:56:23 by mel-idri          #+#    #+#             */
-/*   Updated: 2020/12/10 10:39:08 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:35:39 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,8 +98,8 @@ static char			**split_allow_empty(char const *str, char c)
 			break ;
 	}
 	words[i] = NULL;
-	return (words);	
-}  
+	return (words);
+}
 
 char				**ft_strsplit(char const *s, char c,
 	t_split_mode split_mode)

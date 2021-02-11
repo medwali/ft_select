@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 12:01:42 by mel-idri          #+#    #+#             */
-/*   Updated: 2020/11/22 02:00:25 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/02/11 19:31:15 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	dyn_str_delete_chr(t_dyn_str *dyn_str, size_t i)
 {
-	if (i >	dyn_str->len - 1)
+	if (i > dyn_str->len - 1)
 		return ;
 	if (dyn_str->len + 1 <= dyn_str->capacity / 4)
 		dyn_str_shrink(dyn_str);
